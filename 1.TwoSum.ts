@@ -15,14 +15,14 @@ const twoSum = (nums, target) => {
   const tempData = {};
   let result = [];
   nums.some((item, i) => {
-    tempData[item] = i;
-    const anoKey = tempData[target - item];
-    if (anoKey || anoKey === 0) {
-        result = [i, anoKey];
-        return true;
+    const key = tempData[target - item];
+    if (key !== undefined) {
+      result = [key, i];
+      return true;
     } else {
-        return false;
+      tempData[item] = i;
+      return false;
     }
   })
-  return result.sort();
+  return result;
 };
