@@ -10,7 +10,7 @@
  * @param {number} target
  * @return {number[]}
  */
-const twoSum = (nums, target) => {
+const twoSum = (nums: number[], target: number): number[] => {
   // solution1
   const tempData = {};
   let result = [];
