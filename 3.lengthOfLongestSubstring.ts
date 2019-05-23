@@ -19,6 +19,7 @@
  * @return {Number}
  */
 const lengthOfLongestSubstring = (data: string): number => {
+  // solution 1
   const len = data.length;
   const characterIndex = {}; // 存储字符
   const characterMap = []; // 存储不重复的字符
@@ -36,4 +37,13 @@ const lengthOfLongestSubstring = (data: string): number => {
     res = characterMap.length > res ? characterMap.length : res;
   }
   return res;
+
+  // solution 2
+  /* const map = {};
+  let left = 0;
+  return data.split('').reduce((acc, val, idx) => {
+    left = map[val] >= left ? map[val] + 1 : left;
+    map[val] = idx;
+    return Math.max(acc, idx - left + 1);
+  }, 0); */
 }
