@@ -21,19 +21,17 @@ const findMedianSortedArrays = function(nums1: number[], nums2: number[]): numbe
   // nums1.join().split(',');
   // const newArr1 = JSON.parse(`[${num1.join()}]`);
 
-
   const sum1 = newArr1.reduce((account, val) => val + account);
   const sum2 = newArr2.reduce((account, val) => val + account);
-
   const result = (sum1 + sum2) / (newArr1.length + newArr2.length);
   return result; */
 
   const newArr = nums1.concat(nums2);
-  newArr.sort(function(a, b) {
-    return a - b;
-  });
+  newArr.sort((a, b) => a - b);
 
-  var len = newArr.length;
+  const len = newArr.length;
+  // 两个奇数的结果是一样的，但是Runtime差的特别大
   if (len & 1) return newArr[~~(len / 2)];
+  // if (len % 2 === 1) return newArr[(len - 1) / 2];
   return (newArr[len / 2 - 1] + newArr[len / 2]) / 2;
 };
