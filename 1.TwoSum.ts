@@ -11,7 +11,6 @@
  * @return {number[]}
  */
 const twoSum = (nums: number[], target: number): number[] => {
-  // solution1
   const tempData = {};
   let result = [];
   nums.some((item, i) => {

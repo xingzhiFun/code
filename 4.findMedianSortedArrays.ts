@@ -12,6 +12,7 @@
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
+ * @notice 中位数
  */
 const findMedianSortedArrays = function(nums1: number[], nums2: number[]): number {
   /* // 打平数组 方法1

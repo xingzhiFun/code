@@ -17,6 +17,7 @@
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
+ * @notice 链表
  */
 const addTwoNumbers = (l1, l2) => {
   if (!l1 || !l2) return l1 || l2;
